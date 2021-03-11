@@ -22,6 +22,6 @@ class ProductosModel():
     def editar(self,id, nombre, descripcion, precio_compra, precio_venta, ganancia, estado):
 
         cursor = DB.cursor()
-        cursor.execute("""UPDATE productos SET nombre = ?, descripcion = ?, precio_compra= ?, precio_venta= ?, ganancia= ?, estado= ? WHERE id = ?""", (nombre, descripcion, precio_compra, precio_venta, ganancia, estado, id,))
+        cursor.execute('update productos set nombre = ?, descripcion = ?, precio_compra= ?, precio_venta= ?, ganancia= ?, estado= ? WHERE id = ?', (nombre, descripcion, precio_compra, precio_venta, ganancia, estado, id,))
 
         cursor.close()

@@ -43,14 +43,19 @@ def crear_producto():
 @app.route('/productos/editar/<int:id>', methods=('GET', 'POST'))
 def actualizar_producto(id):
     if request.method == 'GET':
-        
+        # Mostramos el formulario de actualizacion
         return render_template('productos/editar.html')
 
     nombre= request.form.get('nombre')
+
     descripcion= request.form.get('descripcion')
+
     precio_compra= request.form.get('precio_compra')
+
     precio_venta= request.form.get('precio_venta')
+
     ganancia= request.form.get('ganancia')
+    
     estado= request.form.get('estado')
 
     productosModel = ProductosModel()
