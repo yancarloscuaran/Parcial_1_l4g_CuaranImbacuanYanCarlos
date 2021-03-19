@@ -1,0 +1,50 @@
+{% extends 'layouts/base.html' %} {% block titulo %} Guia {% endblock %} {% block contenido %}
+<div class="row">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>
+                Guia para Maria DB
+            </h1>
+        </div>
+    </div>
+
+    <h1>Ingrese los datos de maria DB para gestionar</h1>
+
+    <div>
+        <div class="col-sm-12">
+            <form action="{{ url_for('instalacion') }}" method="POST">
+                <div class="mb-3">
+                    <label for="base_datos">Base de datos</label>
+                    <input type="text" required class="form-control" id="base_datos" name="base_datos">
+                </div>
+
+                <div class="mb-3">
+                    <label for="host">Host</label>
+                    <input type="text" required class="form-control" id="host" name="host">
+                </div>
+
+                <div class="mb-3">
+                    <label for="puerto">Puerto</label>
+                    <input type="text" required class="form-control" id="puerto" name="puerto">
+                </div>
+
+                <div class="mb-3">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" required class="form-control" id="usuario" name="usuario">
+                </div>
+                <div class="mb-3">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="text" class="form-control" id="contrasena" name="contrasena">
+                </div>
+
+                <button class="btn btn-success">
+                    Gurdar
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,37 +1,30 @@
 {% extends 'layouts/base.html' %} {% block titulo %} Productos {% endblock %} {% block contenido %}
 <h1>Listado de Productos</h1>
 
-<!-- <a href="https://www.google.com/" target="_blank">Google</a> -->
-<a href="{{url_for('crear_producto')}}" class="btn btn-primary">Crear</a>
-
+<a href="{{ url_for('crear_producto') }}">Crear Productos</a>
 <table class="table table-bordered">
     <thead>
         <tr>
             <th>ID</th>
             <th>Nombre</th>
             <th>Descripcion</th>
-            <th>Precio Compra COP</th>
-            <th>Precio Venta COP</th>
-            <th>Ganancia (%)</th>
+            <th>Precio de venta</th>
+            <th>Precio de compra</th>
             <th>Estado</th>
-            <th>Edicion</th>
         </tr>
     </thead>
     <tbody>
-        {%for producto in productos%}
+        {% for producto in productos %}
         <tr>
-            <td>{{producto[0]}}</td>
-            <td>{{producto[1]}}</td>
-            <td>{{producto[2]}}</td>
-            <td>{{producto[3]}}</td>
-            <td>{{producto[4]}}</td>
-            <td>{{producto[5]}}</td>
-            <td>{{producto[6]}}</td>
-            <td>
-                <a href="{{url_for('actualizar_producto', id=producto[0])}}" class="btn btn-primary">Editar</a>
-            </td>
+            <td>{{ producto[0] }}</td>
+            <td>{{ producto[1] }}</td>
+            <td>{{ producto[2] }}</td>
+            <td>{{ producto[3] }}</td>
+            <td>{{ producto[4] }}</td>
+            <td>{{ producto[5] }}</td>
         </tr>
         {%endfor%}
-
     </tbody>
-</table>{% endblock %}
+</table>
+
+{% endblock %}

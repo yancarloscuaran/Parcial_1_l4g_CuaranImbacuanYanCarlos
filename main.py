@@ -9,7 +9,3 @@ if __name__ == '__main__':
 #agregar campo a base datos
 #campo estado
 #edicion de productos
-
-#Integrantes
-#Yan Carlos Cuaran Imbacuan
-#Edwar Andres Hernandez Meneses
